@@ -1,0 +1,24 @@
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+} 
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9341dd;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

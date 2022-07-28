@@ -58,11 +58,11 @@
 }
 
 @mixin transition($value) {
-    transition: $value 0.1s ease-in-out;
-    -webkit-transition: $value 0.1s ease-in-out;
-    -moz-transition: $value 0.1s ease-in-out;
-    -ms-transition: $value 0.1s ease-in-out;
-    -o-transition: $value 0.1s ease-in-out;
+    transition: $value 0.2s ease-in-out;
+    -webkit-transition: $value 0.2s ease-in-out;
+    -moz-transition: $value 0.2s ease-in-out;
+    -ms-transition: $value 0.2s ease-in-out;
+    -o-transition: $value 0.2s ease-in-out;
 }
 
 @mixin box-shadow {

@@ -1,0 +1,8 @@
+.navbar-container{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background-color: $lightGray;
+    @include transition(all);
+    z-index: 200;    
+}

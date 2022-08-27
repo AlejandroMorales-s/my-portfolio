@@ -1,0 +1,19 @@
+.about{
+    @include border-top;
+    padding-bottom: $spacing;
+    .about-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+        .header-profile-photo-container{
+            height: 20rem;
+            width: 20rem;
+            margin: 0 auto;
+        }
+        div button{
+            @include btn;
+            margin-top: $spacing;
+            float: right;
+        }
+    }
+}

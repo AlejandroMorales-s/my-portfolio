@@ -1,6 +1,6 @@
 .skills{
     height: fit-content;
-    border-top: 2px dashed $primary;
+    @include border-top;
     .skills-container{
         display: grid;
         grid-template-columns: repeat(5, 1fr);

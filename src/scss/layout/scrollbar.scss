@@ -3,7 +3,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar:vertical {
-    width: 5px;
+    width: 7.5px;
 }
 
 body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
@@ -11,7 +11,7 @@ body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
 } 
 
 body::-webkit-scrollbar-thumb {
-    background-color: #9341dd;
+    background-color: $primary;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;

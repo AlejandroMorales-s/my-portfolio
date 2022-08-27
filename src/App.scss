@@ -14,11 +14,11 @@
 @import './scss/layout/navbar/navbarContainer.scss';
 @import './scss/layout/navbar/navbarContent.scss';
 //* Header
-@import './scss/layout/header/headerContainer.scss';
-@import './scss/layout/header/profileInfo.scss';
-@import './scss/layout/header/headerMessage.scss';
-@import './scss/layout/header/links.scss';
+@import './scss/layout/home/header/headerContainer.scss';
+@import './scss/layout/home/header/profileInfo.scss';
+@import './scss/layout/home/header/headerMessage.scss';
+@import './scss/layout/home/header/links.scss';
 //* Skills
-@import './scss/layout/skills/skills.scss';
+@import './scss/layout/home/skills/skills.scss';
 //* About
-@import './scss/layout/about/aboutContainer.scss';
+@import './scss/layout/home/about/aboutContainer.scss';

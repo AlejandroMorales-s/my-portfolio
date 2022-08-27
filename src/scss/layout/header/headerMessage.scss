@@ -1,0 +1,22 @@
+.header-message-container{
+    display: flex;
+    gap: 15rem;
+    max-height: 12.75rem;
+    align-items: center;
+    padding-bottom: $spacing;
+    width: 100%;
+    div{
+        display: flex;
+        align-items: center;
+        .header-message-arrow{
+            width: 20rem;
+            margin-right: 4rem;
+        }
+        .header-message-title{
+            font-family: $font-secondary;
+            letter-spacing: 0.75rem;
+            font-size: 4rem;
+            color: #ccc;
+        }
+    }
+}

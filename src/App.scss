@@ -9,12 +9,16 @@
 //* Layout
 //* ==================================================
 @import './scss/layout/scrollbar.scss';
+@import './scss/layout/profilePhoto.scss';
 //* Navbar
 @import './scss/layout/navbar/navbarContainer.scss';
 @import './scss/layout/navbar/navbarContent.scss';
 //* Header
 @import './scss/layout/header/headerContainer.scss';
 @import './scss/layout/header/profileInfo.scss';
+@import './scss/layout/header/headerMessage.scss';
 @import './scss/layout/header/links.scss';
 //* Skills
 @import './scss/layout/skills/skills.scss';
+//* About
+@import './scss/layout/about/aboutContainer.scss';

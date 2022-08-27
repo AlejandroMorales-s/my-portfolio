@@ -5,7 +5,12 @@
 }
 
 @mixin tablet {
-    @media (min-width: $tablet) and (max-width: $desktop){
+    @media (min-width: $tablet) and (max-width: $laptop){
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: $laptop) and (max-width: $desktop){
         @content;
     }
 }
@@ -14,6 +19,10 @@
     @media (min-width: $desktop) {
         @content;
     }
+}
+
+@mixin border-top {
+    border-top: 2px dashed $primary;
 }
 
 @mixin btn {

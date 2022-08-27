@@ -9,14 +9,21 @@
         display: flex;
         align-items: center;
         .header-message-arrow{
-            width: 20rem;
+            width: 15rem;
             margin-right: 4rem;
         }
         .header-message-title{
             font-family: $font-secondary;
             letter-spacing: 0.75rem;
-            font-size: 4rem;
-            color: #ccc;
+            font-size: 3.5rem;
+            color: #D8D8D8;
         }
+    }
+}
+
+@include laptop{
+    .header-message-title,
+    .header-message-arrow{
+        margin-top: $spacing;
     }
 }

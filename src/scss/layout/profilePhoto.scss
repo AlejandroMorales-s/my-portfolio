@@ -1,0 +1,11 @@
+.header-profile-photo-container{
+    background-color: $primary;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50% 0 50% 0;
+    -webkit-border-radius: 50% 0 50% 0;
+    -moz-border-radius: 50% 0 50% 0;
+    -ms-border-radius: 50% 0 50% 0;
+    -o-border-radius: 50% 0 50% 0;
+    overflow: hidden;
+}

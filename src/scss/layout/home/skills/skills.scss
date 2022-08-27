@@ -33,27 +33,8 @@
         }
     }
 }
-.js{
-    fill: #f0db4f;
-}
-.tailwind{
-    fill: #47acb4;
-}
-.html{
-    fill: #e44d26;
-}
-.sass{
-    fill: #cb6699;
-}
-.react{
-    fill: #61dafb;
-}
-.css{
-    fill: #1572b6;
-}
-.node{
-    fill: #83cd29;
-}
-.git{
-    fill: #f03c2e;
+@each $skill, $color in $skills {
+    .#{$skill}{
+        fill: $color;
+    }
 }

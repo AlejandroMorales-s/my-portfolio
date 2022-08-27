@@ -3,13 +3,13 @@
 $font: 'Poppins', sans-serif;
 $font-secondary: 'Sriracha', cursive;
 
-// Fuentes
+//* Fuentes
 $light: 300;
 $regular: 400;
 $medium: 500;
 $semiBold: 600;
 
-// Colors
+//* Colors
 $primary: #7353BA;
 $lightGray: #f5f5f5;
 $white: #ffffff;
@@ -17,14 +17,34 @@ $black: #000000;
 $text: #6B7280;
 $red: #ff0000;
 
-// Media Queries
+$js: #f0db4f;
+$tailwind: #47acb4;
+$html: #e44d26;
+$sass: #cb6699;
+$react: #61dafb;
+$css: #1572b6;
+$node: #83cd29;
+$git: #f03c2e;
+
+//* Breakpoints
 $mobile: 359px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1550px;
 
-// Margins
+//* Margins
 $spacing: 5rem;
 
-// Font Sizes
+//* Font Sizes
 $fontSize: (2.25rem, 3rem, 2.6rem, 1.6rem);
+
+//* Skills
+$skills: 
+    "js" $js,
+    'tailwind' $tailwind, 
+    'html' $html, 
+    'sass' $sass, 
+    'react' $react, 
+    'css' $css, 
+    'node' $node, 
+    'git' $git;

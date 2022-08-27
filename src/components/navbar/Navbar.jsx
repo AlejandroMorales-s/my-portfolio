@@ -13,6 +13,15 @@ export default function Navbar() {
         currentPosition >= scrolling ? setShowNavbar(true) : setShowNavbar(false);
         currentPosition = scrolling;
     };
+
+    //* Smooth scroll
+    const scroll = (e) => {
+        e.preventDefault();
+        const href = e.target.attributes.href.value;
+        const section =  document.querySelector(href);
+        section.scrollIntoView({behavior: "smooth"});
+    };
+
     return (
         <div className={`${showNavbar ? 'show-navbar' : 'hide-navbar'} navbar-container`}>
             <div className='container navbar'>
@@ -21,9 +30,10 @@ export default function Navbar() {
                 </Link>
                 <nav>
                     <ul>
-                        <li><a href='#about'>About</a></li>
-                        <li><a href='#projects'>Projects</a></li>
-                        <li><a href='#contact'>Contact</a></li>
+                        <li><a onClick={(e) => scroll(e)} className='nav-button' href='#skills'>Skills</a></li>
+                        <li><a onClick={(e) => scroll(e)} className='nav-button' href='#about'>About</a></li>
+                        <li><a onClick={(e) => scroll(e)} className='nav-button' href='#projects'>Projects</a></li>
+                        <li><a onClick={(e) => scroll(e)} className='nav-button' href='#certificates'>Certificates</a></li>
                         <li>
                             <button>
                                 CV

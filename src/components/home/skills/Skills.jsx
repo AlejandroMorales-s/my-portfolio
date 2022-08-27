@@ -5,7 +5,7 @@ import {IoLogoCss3, IoLogoNodejs} from 'react-icons/io';
 
 export default function Skills() {
     return (
-        <div className='container skills'>
+        <div id='skills' className='container skills'>
             <h2 className='h2'>Skills</h2>
             <div className='skills-container'>
                 <div className='skill'>

@@ -1,0 +1,32 @@
+.certificate-card{
+    min-width: 40rem;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    gap: 2.5rem;
+    align-items: center;
+    transition: all ease-in-out 100ms;
+    -webkit-transition: all ease-in-out 100ms;
+    -moz-transition: all ease-in-out 100ms;
+    -ms-transition: all ease-in-out 100ms;
+    -o-transition: all ease-in-out 100ms;
+    border: 2px solid #D8D8D8;
+    &:hover{
+        @include box-shadow;
+        border-color: $primary;
+        cursor: pointer;
+        background-color: $white;
+        p{color: $primary;}
+    }
+    .certificate-img-container{
+        max-height: 30rem;
+        overflow: hidden;
+    }
+    p{font-weight: $medium;}
+}

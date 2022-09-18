@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../components/home/about/About';
+import Certificates from '../components/home/certificates/Certificates';
 import Header from '../components/home/header/Header';
 import Projects from '../components/home/projects/Projects';
 import Skills from '../components/home/skills/Skills';
@@ -11,6 +12,7 @@ export default function Home() {
             <Skills/>
             <About/>
             <Projects/>
+            <Certificates/>
         </>
     )
 }

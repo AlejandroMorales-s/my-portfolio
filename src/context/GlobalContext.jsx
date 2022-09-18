@@ -6,29 +6,38 @@ export const globalContext = createContext();
 
 export default function GlobalContext({children}) {
     const [personalProjects, setPersonalProjects] = useState([]);
+    const [certificates, setCertificates] = useState([]);
 
-    const getProjects = async () => {
-        const col = collection(database, "projects")
+    const getData = async (collectionName) => {
+        const col = collection(database, collectionName)
         const querySnapshot = await getDocs(col)
-        const projects = []
+        const data = []
     
         querySnapshot.forEach(doc => {
-            projects.push(
+            data.push(
                 {
                     id: doc.id,
                     data: doc.data()
                 }
             )
         })
-        setPersonalProjects(projects)
+        return data
     }
+
     useEffect(() => {
-        getProjects()
+        getData('projects')
+        .then(data => setPersonalProjects(data))
+        .catch(error => console.log(error))
+
+        getData('certificates')
+        .then(data => setCertificates(data))
+        .catch(error => console.log(error))
     }, [])
 
     return (
         <globalContext.Provider value={{
-            personalProjects
+            personalProjects,
+            certificates
         }}>
             {children}
         </globalContext.Provider>

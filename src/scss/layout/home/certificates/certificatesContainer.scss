@@ -1,0 +1,13 @@
+.certificates{
+    @include border-top;
+    padding-bottom: $spacing;
+    .certificates-container{
+        display: flex;
+        width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 4rem;
+        padding: 2rem;
+        align-items: center;
+    }
+}

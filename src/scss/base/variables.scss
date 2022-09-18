@@ -25,6 +25,17 @@ $react: #61dafb;
 $css: #1572b6;
 $node: #83cd29;
 $git: #f03c2e;
+$firebase: #ffcb2b;
+
+$firebase-degraded: #ffca2b38;
+$js-degraded: #f0da4f3d;
+$tailwind-degraded: #47adb43d;
+$html-degraded: #e44c263b;
+$sass-degraded: #cb66983a;
+$react-degraded: #61dafb3b;
+$css-degraded: #1573b63e;
+$node-degraded: #83cd293d;
+$git-degraded: #f03b2e39;
 
 //* Breakpoints
 $mobile: 359px;
@@ -48,3 +59,13 @@ $skills:
     'css' $css, 
     'node' $node, 
     'git' $git;
+
+$skillsProjectCard:
+    "javascript-project-card" $js $js-degraded,
+    'tailwind-project-card' $tailwind $tailwind-degraded, 
+    'html-project-card' $html $html-degraded, 
+    'sass-project-card' $sass $sass-degraded, 
+    'react-project-card' $react $react-degraded, 
+    'css-project-card' $css $css-degraded, 
+    'node-project-card' $node $node-degraded, 
+    'firebase-project-card' $firebase $firebase-degraded, 

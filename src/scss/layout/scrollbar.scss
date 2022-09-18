@@ -1,16 +1,21 @@
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.projects-cards-container::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-body::-webkit-scrollbar:vertical {
+body::-webkit-scrollbar:vertical,
+.projects-cards-container::-webkit-scrollbar:horizontal {
     width: 7.5px;
+    height: 7.5px;
 }
 
-body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button,
+.projects-cards-container::-webkit-scrollbar-button:increment, .projects-cards-container::-webkit-scrollbar-button {
     display: none;
 } 
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+.projects-cards-container::-webkit-scrollbar-thumb {
     background-color: $primary;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -19,6 +24,7 @@ body::-webkit-scrollbar-thumb {
     -o-border-radius: 20px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+.projects-cards-container::-webkit-scrollbar-track {
     border-radius: 10px;  
 }

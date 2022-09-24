@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {MdMenu} from 'react-icons/md'
 import {AiOutlineDownload} from 'react-icons/ai';
 
-export default function MobileNavbar() {
+export default function MobileNavbar({showNavbar}) {
     const [showNav, setShowNav] = useState(false)
 
     //* Smooth scroll
@@ -17,7 +17,7 @@ export default function MobileNavbar() {
     return (
         <div className='mobile-menu'>
             <MdMenu onClick={() => setShowNav(!showNav)} className={`mobile-menu-icon ${showNav ? 'icon-active' : 'icon-inactive'}`}/>
-            <nav className={`mobile-nav ${showNav ? 'show-item' : 'hide-item'}`}>
+            <nav className={`mobile-nav ${showNav && showNavbar ? 'show-item' : 'hide-item'}`}>
                     <ul>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#skills'>Skills</a></li>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#about'>About</a></li>

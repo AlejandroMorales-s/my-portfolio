@@ -43,7 +43,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
-                <MobileNavbar/>
+                <MobileNavbar showNavbar={showNavbar}/>
             </div>
         </div>
     )

@@ -4,13 +4,26 @@ import ProjectCard from './ProjectCard';
 
 export default function Projects() {
     const {personalProjects} = useContext(globalContext)
+    const {mobileView} = useContext(globalContext)
+
+    const projectsMobile = []
+    
+    for (let index = 0; index < 3; index++) {
+        projectsMobile.push(personalProjects[index])
+    }
     return (
         <div id='projects' className='container projects'>
             <h2 className='h2'>Projects</h2>
             <div className='projects-cards-container'>
-                {personalProjects?.map(project => {
-                    return <ProjectCard key={project.id} project={project}/>
-                })}
+                {mobileView ? 
+                    projectsMobile?.map(project => {
+                        return project !== undefined && <ProjectCard key={project.id} project={project}/>
+                    })
+                :
+                    personalProjects?.map(project => {
+                        return <ProjectCard key={project.id} project={project}/>
+                    })
+                }
             </div>
         </div> 
     )

@@ -5,16 +5,13 @@ import { database } from '../libs/firebase'
 export const globalContext = createContext();
 
 export default function GlobalContext({children}) {
-    const [personalProjects, setPersonalProjects] = useState([]);
-    const [certificates, setCertificates] = useState([]);
-
     const getData = async (collectionName) => {
         const col = collection(database, collectionName)
         const querySnapshot = await getDocs(col)
         const data = []
     
-        querySnapshot.forEach(doc => {
-            data.push(
+    querySnapshot.forEach(doc => {
+        data.push(
                 {
                     id: doc.id,
                     data: doc.data()
@@ -23,6 +20,31 @@ export default function GlobalContext({children}) {
         })
         return data
     }
+
+    let onMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (onMobile.Android() || onMobile.BlackBerry() || onMobile.iOS() || onMobile.Opera() || onMobile.Windows());
+        }
+    };
+
+    const [personalProjects, setPersonalProjects] = useState([]);
+    const [certificates, setCertificates] = useState([]);
+    const [mobileView, setMobileView] = useState(onMobile.any() !== null);
 
     useEffect(() => {
         getData('projects')
@@ -37,7 +59,8 @@ export default function GlobalContext({children}) {
     return (
         <globalContext.Provider value={{
             personalProjects,
-            certificates
+            certificates,
+            mobileView
         }}>
             {children}
         </globalContext.Provider>

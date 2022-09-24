@@ -1,13 +1,22 @@
 .certificates{
     @include border-top;
     padding-bottom: $spacing;
+    display: flex;
+    flex-direction: column;
     .certificates-container{
         display: flex;
         width: auto;
         overflow-x: scroll;
         overflow-y: hidden;
         gap: 4rem;
-        padding: 2rem;
+        padding: 1rem 0;
         align-items: center;
+    }
+    .certificates-button{
+        align-self: flex-end;
+        margin-top: 5rem;
+        button{
+            @include btn;
+        }
     }
 }

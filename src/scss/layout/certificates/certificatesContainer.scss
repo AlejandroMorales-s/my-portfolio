@@ -1,0 +1,9 @@
+.certificates-page{
+    padding-top: 7.36rem;
+    .certificates-page-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        justify-items: center;
+    }
+}

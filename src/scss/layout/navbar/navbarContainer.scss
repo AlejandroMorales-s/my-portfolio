@@ -5,4 +5,5 @@
     background-color: $lightGray;
     @include transition(all);
     z-index: 200;    
+    border-bottom: 2px solid $darkGray;
 }

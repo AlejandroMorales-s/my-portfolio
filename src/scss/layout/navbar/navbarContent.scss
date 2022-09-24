@@ -52,8 +52,48 @@
     }
     .navbar .mobile-menu{
         display: block;
+        position: relative;
         .mobile-menu-icon{
             font-size: 3rem;
         }
+        .mobile-nav{
+            position: absolute;
+            right: 0;
+            top: 7.3rem;
+            background-color: $white;
+            padding: 2.5rem;
+            width: 15rem;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+            border: 2px solid $darkGray;
+            @include box-shadow;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                align-items: center;
+                button{
+                    @include btn;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    padding: calc($spacing / 8) calc($spacing / 4);
+                    font-size: 1.4rem;
+                    width: 100%;
+                    .download-icon{
+                        fill: $lightGray;
+                        transform: scale(1.25);
+                        -webkit-transform: scale(1.25);
+                        -moz-transform: scale(1.25);
+                        -ms-transform: scale(1.25);
+                        -o-transform: scale(1.25);
+                    }
+                }
+            }
+        } 
     }
 }

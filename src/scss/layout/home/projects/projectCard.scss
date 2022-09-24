@@ -71,3 +71,10 @@
         }
     }
 }
+
+@include mobile{
+    .project-card{
+        max-width: 100%;
+        min-width: 100%;
+    }
+}

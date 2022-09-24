@@ -30,3 +30,10 @@
     }
     p{font-weight: $medium;}
 }
+
+@include mobile{
+    .certificate-card{
+        max-width: 100%;
+        min-width: 100%;
+    }
+}

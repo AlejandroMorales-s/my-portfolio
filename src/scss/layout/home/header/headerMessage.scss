@@ -27,3 +27,12 @@
         margin-top: $spacing;
     }
 }
+
+@include mobile{
+    .header-message-container{
+        padding: 2rem 0;
+        div{
+            display: none;
+        }
+    }
+}

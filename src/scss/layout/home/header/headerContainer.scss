@@ -7,3 +7,9 @@
         align-items: flex-end;
     }
 }
+
+@include mobile{
+    .header-container{
+        height: 85vh;
+    }
+}

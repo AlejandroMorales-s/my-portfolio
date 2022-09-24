@@ -20,3 +20,9 @@
         }
     }
 }
+
+@include mobile{
+    .certificates .certificates-container{
+        flex-direction: column;
+    }
+}

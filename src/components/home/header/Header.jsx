@@ -5,7 +5,7 @@ import ProfileInfo from './ProfileInfo';
 
 export default function Header() {
     return (
-        <header className='header-container'>
+        <header className='header-container container'>
             <div className='header container relative'>
                 <ProfileInfo/>
                 <div className='header-message-container'>

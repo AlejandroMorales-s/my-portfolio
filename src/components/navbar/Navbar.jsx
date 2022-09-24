@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {AiOutlineDownload} from 'react-icons/ai';
 import {Link} from 'react-router-dom';
+import MobileNavbar from './MobileNavbar';
 
 export default function Navbar() {
     const [showNavbar, setShowNavbar] = useState(true);
@@ -28,7 +29,7 @@ export default function Navbar() {
                 <Link to='/'>
                     <h1>Alejandro Morales</h1>
                 </Link>
-                <nav>
+                <nav className='desktop-menu'>
                     <ul>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#skills'>Skills</a></li>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#about'>About</a></li>
@@ -42,6 +43,7 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
+                <MobileNavbar/>
             </div>
         </div>
     )

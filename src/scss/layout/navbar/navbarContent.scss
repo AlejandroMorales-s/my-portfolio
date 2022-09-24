@@ -1,8 +1,11 @@
+.navbar-container{
+    width: 100vw;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
-    nav{
+    .desktop-menu{
         display: flex;
         align-items: center;
         ul{
@@ -38,4 +41,19 @@
             }
         }
     } 
+    .mobile-menu{
+        display: none;
+    }
+}
+
+@include mobile{
+    .desktop-menu{
+        display: none !important;
+    }
+    .navbar .mobile-menu{
+        display: block;
+        .mobile-menu-icon{
+            font-size: 3rem;
+        }
+    }
 }

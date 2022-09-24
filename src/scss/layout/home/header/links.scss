@@ -14,3 +14,16 @@
         }
     }
 }
+
+@include mobile{
+    .header-icons-container{
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        border: none;
+        .header-icon{
+            font-size: 5rem;
+        }
+    }
+}

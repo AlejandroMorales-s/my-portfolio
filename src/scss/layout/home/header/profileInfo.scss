@@ -38,3 +38,9 @@
         border-color: transparent;
     }
 }
+
+@include mobile{
+    .header-info-container h2{
+        font-size: 3.15rem;
+    }
+}

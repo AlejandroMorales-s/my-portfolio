@@ -10,6 +10,9 @@
 //* ==================================================
 @import './scss/layout/scrollbar.scss';
 @import './scss/layout/profilePhoto.scss';
+//* Go to top button
+@import './scss/layout/goToTopButton.scss';
+
 //* Navbar
 @import './scss/layout/navbar/navbarContainer.scss';
 @import './scss/layout/navbar/navbarContent.scss';
@@ -31,3 +34,5 @@
 @import './scss/layout/home/certificates/certificateOverlay.scss';
 //* Certificates Page
 @import './scss/layout/certificates/certificatesContainer.scss';
+//* Projects Page
+@import './scss/layout/projects/projectsContainer.scss';

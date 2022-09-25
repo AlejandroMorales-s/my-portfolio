@@ -7,3 +7,9 @@
         justify-items: center;
     }
 }
+
+@include mobile{
+    .certificates-page .certificates-page-container{
+        grid-template-columns: 1fr;
+    }
+}

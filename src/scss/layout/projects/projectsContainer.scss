@@ -7,3 +7,9 @@
         justify-items: center;
     }
 }
+
+@include mobile{
+    .projects-page .projects-page-container{
+        grid-template-columns: 1fr;
+    }
+}

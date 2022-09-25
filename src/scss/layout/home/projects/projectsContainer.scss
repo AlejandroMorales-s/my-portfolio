@@ -10,3 +10,9 @@
         padding: 2rem;
     }
 }
+
+@include mobile{
+    .projects-cards-container{
+        flex-direction: column;
+    }
+}

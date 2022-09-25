@@ -23,32 +23,32 @@ export default function GlobalContext({children}) {
 
     let onMobile = {
         Android: function() {
-            return navigator.userAgent.match(/Android/i);
+            return navigator.userAgent.match(/Android/i)
         },
         BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
+            return navigator.userAgent.match(/BlackBerry/i)
         },
         iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i)
         },
         Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
+            return navigator.userAgent.match(/Opera Mini/i)
         },
         Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
+            return navigator.userAgent.match(/IEMobile/i)
         },
         any: function() {
-            return (onMobile.Android() || onMobile.BlackBerry() || onMobile.iOS() || onMobile.Opera() || onMobile.Windows());
+            return (onMobile.Android() || onMobile.BlackBerry() || onMobile.iOS() || onMobile.Opera() || onMobile.Windows())
         }
     };
 
-    const [personalProjects, setPersonalProjects] = useState([]);
-    const [certificates, setCertificates] = useState([]);
-    const [mobileView, setMobileView] = useState(onMobile.any() !== null);
+    const [personalProjects, setPersonalProjects] = useState([])
+    const [certificates, setCertificates] = useState([])
+    const [mobileView, setMobileView] = useState(onMobile.any() !== null)
 
     useEffect(() => {
         getData('projects')
-        .then(data => setPersonalProjects(data))
+        .then(data => setPersonalProjects(data.reverse()))
         .catch(error => console.log(error))
 
         getData('certificates')

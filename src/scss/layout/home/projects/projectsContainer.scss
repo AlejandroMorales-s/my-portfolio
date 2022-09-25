@@ -1,6 +1,8 @@
 .projects{
     @include border-top;
     padding-bottom: $spacing;
+    display: flex;
+    flex-direction: column;
     .projects-cards-container{
         display: flex;
         width: auto;
@@ -9,10 +11,17 @@
         gap: 4rem;
         padding: 2rem;
     }
+    .projects-button{
+        align-self: flex-end;
+        margin-top: 5rem;
+        button{
+            @include btn;
+        }
+    }
 }
 
 @include mobile{
-    .projects-cards-container{
+    .projects .projects-cards-container{
         flex-direction: column;
     }
 }

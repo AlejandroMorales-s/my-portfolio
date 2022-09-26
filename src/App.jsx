@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import { useState } from 'react';
 import {FaArrowCircleUp} from 'react-icons/fa'
 import { useEffect } from 'react';
+import ProjectDetails from './pages/ProjectDetails';
 
 function App() {
   let location = useLocation()
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/certificates" element={<Certificates/>} />
         <Route path="/projects" element={<Projects/>} />
+        <Route path="/project-details/:id" element={<ProjectDetails/>} />
       </Routes>
       {showBtn && 
         <FaArrowCircleUp onClick={scroll} className='go-to-top-button' />

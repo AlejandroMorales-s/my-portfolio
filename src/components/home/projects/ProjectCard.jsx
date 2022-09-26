@@ -1,12 +1,14 @@
 import {FaReact, FaSass, FaHtml5} from 'react-icons/fa'
 import {SiTailwindcss, SiJavascript, SiFirebase} from 'react-icons/si'
 import {IoLogoCss3, IoLogoNodejs} from 'react-icons/io'
+import { useNavigate } from 'react-router-dom'
 
 export default function ProjectCard({project}) {
+    const navigate = useNavigate()
     const {name, images, description, technologies} = project.data
 
     return (
-        <div className='project-card'>
+        <div onClick={() => navigate(`/project-details/${project.id}`)} className='project-card'>
             <div className='project-card-img-container'>
                 <img src={images[0]} alt={name} />
             </div>

@@ -13,30 +13,25 @@
             justify-content: space-between;
             align-items: center;
             gap: 1.5rem;
-            li a{
-                color: $black;
-                font-weight: $medium;
-            }
-            li button{
-                @include btn;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem;
-                padding: calc($spacing / 8) calc($spacing / 4);
-                font-size: 1.4rem;
-                &:hover{
-                    .download-icon{
-                        fill: $primary;
-                    }
+            li{
+                a{
+                    color: $black;
+                    font-weight: $medium;
                 }
-                .download-icon{
-                    fill: $lightGray;
-                    transform: scale(1.25);
-                    -webkit-transform: scale(1.25);
-                    -moz-transform: scale(1.25);
-                    -ms-transform: scale(1.25);
-                    -o-transform: scale(1.25);
+                &:last-of-type{
+                    @include btn;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    padding: calc($spacing / 8) calc($spacing / 4);
+                    font-size: 1.4rem;
+                    &:hover a{
+                        color: $primary;
+                    }
+                    a{
+                        color: $white;
+                    }
                 }
             }
         }

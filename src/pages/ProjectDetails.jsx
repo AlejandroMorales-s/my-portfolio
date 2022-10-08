@@ -4,7 +4,6 @@ import Loader from "../components/Loader";
 import { doc, getDoc } from "firebase/firestore";
 import { database } from "../libs/firebase";
 import {AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
-import { useRef } from "react";
 import ProfilePhoto from '../assets/headerPhoto.png';
 import DocumentTitle from "react-document-title";
 
@@ -18,13 +17,6 @@ export default function ProjectDetails() {
     const param = useParams()
     const {id} = param
 
-    const image = useRef()
-    const imageSrcHandler = () => {
-        console.log(image.current.src); 
-    }
-
-
-
     //* Get project data
     const getProject = async () => {
         const docRef = doc(database, "projects", id)
@@ -36,7 +28,6 @@ export default function ProjectDetails() {
     const previousImage = () => {
         if(currentImage === 0) setCurrentImage(imagesTotal)
         else setCurrentImage(currentImage - 1)
-        imageSrcHandler()
     }
     
     //* Next image
@@ -68,7 +59,7 @@ export default function ProjectDetails() {
                                 <AiOutlineLeft className="project-images-icon"/>
                             </div>
                             <div className="project-image-container">
-                                <img ref={image} src={ProfilePhoto} srcSet={project.images[currentImage]} alt={project.name} />
+                                <img src={ProfilePhoto} srcSet={project.images[currentImage]} alt={project.name} />
                             </div>
                             <div onClick={() => nextImage()} className="project-images-icons-container">
                                 <AiOutlineRight className="project-images-icon"/>
@@ -76,14 +67,18 @@ export default function ProjectDetails() {
                         </div>
                         <div className="info-container">
                             <p>{project.info}</p>
-                            <h3>Funcionalidades disponibles:</h3>
-                            <ul className="functionalities-list">
-                                {project.functions.map(element => {
-                                    return(
-                                        <li key={element}>{element}</li>
-                                    )
-                                })}
-                            </ul>
+                            {project.functions && 
+                                <>
+                                    <h3>Funcionalidades disponibles:</h3>
+                                    <ul className="functionalities-list">
+                                        {project.functions.map((element, index) => {
+                                            return(
+                                                <li key={index}>{element}</li>
+                                            )
+                                        })}
+                                    </ul>
+                                </>
+                            }
                             <div className="project-buttons-container">
                                 <a href={project.repoLink} target='_blank'>
                                     <button>Repositorio</button>

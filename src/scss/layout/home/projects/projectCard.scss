@@ -5,8 +5,8 @@
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    min-width: 30rem;
-    max-width: 30rem;
+    min-width: 31rem;
+    max-width: 31rem;
     height: fit-content;
     transition: all ease-in-out 100ms;
     -webkit-transition: all ease-in-out 100ms;
@@ -41,6 +41,11 @@
         }
         p{
             word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
     }
     .project-card-technologies{

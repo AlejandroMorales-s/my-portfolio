@@ -1,0 +1,60 @@
+.contact-form{
+    border: 2px solid $darkGray;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: $white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    @include box-shadow;
+    width: 95%;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 2.5rem;
+    .contact-form-input-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    button{
+        @include btn;
+        width: fit-content;
+        align-self: flex-end;
+    }
+}
+
+.message-container{
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .message-icon{
+        fill: $white;
+        font-size: 3rem;
+    }
+    p{
+        color: $white;
+        font-weight: $medium;
+    }
+}
+.success-message{
+    background-color: $green;
+    width: 95%;
+    max-width: fit-content;
+    margin-top: 5rem;
+}
+.error-message{
+    background-color: $red;
+    width: 100%;
+}

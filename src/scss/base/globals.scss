@@ -31,13 +31,29 @@ p{
     font-size: 1.5rem;
     line-height: 2.25rem;
 }
-li{
-    font-size: 1.5rem;
-}
-a{
+a, li{
     text-decoration: none;
     font-size: 1.5rem;
 }
+label{
+    font-size: 1.7rem;
+    font-weight: $medium;
+}
 ul{
     list-style: none;
+}
+input, textarea{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    border: 2px solid $primary;
+    font-size: 1.5rem;
+    &:focus{
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        border: 2px solid $primary
+    }
 }

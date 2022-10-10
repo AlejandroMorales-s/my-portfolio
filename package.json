@@ -11,6 +11,7 @@
     "vdev": "vercel dev --local-config ./vercel-dev.json"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.0",
     "@react-hook/hover": "^4.0.0",
     "firebase": "^9.10.0",
     "react": "^18.2.0",

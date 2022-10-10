@@ -1,0 +1,30 @@
+.contact-container{
+    @include border-top;
+    &>p{
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+    .contact-social-media-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+        align-items: center;
+        justify-items: center;
+        @each $socialMedia, $color in $socialMediaColors {
+            .#{$socialMedia}{
+                font-size: 10rem;
+                @include transition(all);
+                &:hover{
+                    cursor: pointer;
+                    fill: $color;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .contact-container .contact-social-media-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

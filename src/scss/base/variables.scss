@@ -17,6 +17,7 @@ $white: #ffffff;
 $black: #000000;
 $text: #6B7280;
 $red: #ff0000;
+$green: #1f9f43;
 
 $js: #f0db4f;
 $tailwind: #47acb4;
@@ -37,6 +38,11 @@ $react-degraded: #61dafb3b;
 $css-degraded: #1573b63e;
 $node-degraded: #83cd293d;
 $git-degraded: #f03b2e39;
+
+$instagram: #f36a3c;
+$fiverr: #1dbf73;
+$linkedin: #0a66c2;
+$github: #212121;
 
 //* Breakpoints
 $mobile: 359px;
@@ -59,7 +65,8 @@ $skills:
     'react' $react, 
     'css' $css, 
     'node' $node, 
-    'git' $git;
+    'git' $git
+;
 
 $skillsProjectCard:
     "javascript-project-card" $js $js-degraded,
@@ -70,3 +77,11 @@ $skillsProjectCard:
     'css-project-card' $css $css-degraded, 
     'node-project-card' $node $node-degraded, 
     'firebase-project-card' $firebase $firebase-degraded, 
+;
+
+$socialMediaColors:
+    'instagram' $instagram,
+    'fiverr' $fiverr,
+    'linkedin' $linkedin,
+    'github' $github
+;

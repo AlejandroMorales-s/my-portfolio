@@ -70,22 +70,25 @@
                 flex-direction: column;
                 gap: 2.5rem;
                 align-items: center;
-                button{
-                    @include btn;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 0.5rem;
-                    padding: calc($spacing / 8) calc($spacing / 4);
-                    font-size: 1.4rem;
-                    width: 100%;
-                    .download-icon{
-                        fill: $lightGray;
-                        transform: scale(1.25);
-                        -webkit-transform: scale(1.25);
-                        -moz-transform: scale(1.25);
-                        -ms-transform: scale(1.25);
-                        -o-transform: scale(1.25);
+                li{
+                    a{
+                        color: $black;
+                        font-weight: $medium;
+                    }
+                    &:last-of-type{
+                        @include btn;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+                        padding: calc($spacing / 8) calc($spacing / 4);
+                        font-size: 1.4rem;
+                        &:hover a{
+                            color: $primary;
+                        }
+                        a{
+                            color: $white;
+                        }
                     }
                 }
             }

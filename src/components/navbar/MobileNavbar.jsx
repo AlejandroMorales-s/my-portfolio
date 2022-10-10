@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import {MdMenu} from 'react-icons/md'
-import {AiOutlineDownload} from 'react-icons/ai';
 
 export default function MobileNavbar({showNavbar}) {
     const [showNav, setShowNav] = useState(false)
@@ -23,12 +22,7 @@ export default function MobileNavbar({showNavbar}) {
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#about'>About</a></li>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#projects'>Projects</a></li>
                         <li><a onClick={(e) => scroll(e)} className='nav-button' href='#certificates'>Certificates</a></li>
-                        <li>
-                            <button>
-                                CV
-                                <AiOutlineDownload className='download-icon'/>
-                            </button>
-                        </li>
+                        <li><a onClick={(e) => scroll(e)} href="#contact">Contact</a></li>
                     </ul>
                 </nav>
         </div>

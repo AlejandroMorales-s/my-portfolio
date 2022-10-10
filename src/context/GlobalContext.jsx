@@ -5,13 +5,14 @@ import { database } from '../libs/firebase'
 export const globalContext = createContext();
 
 export default function GlobalContext({children}) {
+
     const getData = async (collectionName) => {
         const col = collection(database, collectionName)
         const querySnapshot = await getDocs(col)
         const data = []
     
-    querySnapshot.forEach(doc => {
-        data.push(
+        querySnapshot.forEach(doc => {
+            data.push(
                 {
                     id: doc.id,
                     data: doc.data()
@@ -40,11 +41,11 @@ export default function GlobalContext({children}) {
         any: function() {
             return (onMobile.Android() || onMobile.BlackBerry() || onMobile.iOS() || onMobile.Opera() || onMobile.Windows())
         }
-    };
+    }
 
     const [personalProjects, setPersonalProjects] = useState([])
     const [certificates, setCertificates] = useState([])
-    const [mobileView, setMobileView] = useState(onMobile.any() !== null)
+    const [mobileView] = useState(onMobile.any() !== null)
 
     useEffect(() => {
         getData('projects')

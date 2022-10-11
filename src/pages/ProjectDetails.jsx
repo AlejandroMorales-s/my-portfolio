@@ -66,7 +66,10 @@ export default function ProjectDetails() {
                             </div>
                         </div>
                         <div className="info-container">
-                            <p>{project.info}</p>
+                            <div className="info">
+                                <p>{project.description}</p>
+                                <p>{project.info}</p>
+                            </div>
                             {project.functions && 
                                 <>
                                     <h3>Funcionalidades disponibles:</h3>

@@ -1,69 +1,74 @@
-import React, {createContext, useState, useEffect} from 'react'
-import { collection, getDocs } from 'firebase/firestore'
-import { database } from '../libs/firebase'
+import React, { createContext, useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { database } from "../libs/firebase";
 
 export const globalContext = createContext();
 
-export default function GlobalContext({children}) {
+export default function GlobalContext({ children }) {
+  const getData = async (collectionName) => {
+    const col = collection(database, collectionName);
+    const querySnapshot = await getDocs(col);
+    const data = [];
 
-    const getData = async (collectionName) => {
-        const col = collection(database, collectionName)
-        const querySnapshot = await getDocs(col)
-        const data = []
-    
-        querySnapshot.forEach(doc => {
-            data.push(
-                {
-                    id: doc.id,
-                    data: doc.data()
-                }
-            )
-        })
-        return data
-    }
-
-    let onMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i)
+    querySnapshot.forEach((doc) => {
+      data.push(
+        {
+          id: doc.id,
+          data: doc.data(),
         },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i)
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i)
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i)
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i)
-        },
-        any: function() {
-            return (onMobile.Android() || onMobile.BlackBerry() || onMobile.iOS() || onMobile.Opera() || onMobile.Windows())
-        }
-    }
+      );
+    });
+    return data;
+  };
 
-    const [personalProjects, setPersonalProjects] = useState([])
-    const [certificates, setCertificates] = useState([])
-    const [mobileView] = useState(onMobile.any() !== null)
+  const onMobile = {
+    Android() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows() {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any() {
+      return (onMobile.Android()
+        || onMobile.BlackBerry()
+        || onMobile.iOS()
+        || onMobile.Opera()
+        || onMobile.Windows()
+      );
+    },
+  };
 
-    useEffect(() => {
-        getData('projects')
-        .then(data => setPersonalProjects(data.reverse()))
-        .catch(error => console.log(error))
+  const [personalProjects, setPersonalProjects] = useState([]);
+  const [certificates, setCertificates] = useState([]);
+  const [mobileView] = useState(onMobile.any() !== null);
 
-        getData('certificates')
-        .then(data => setCertificates(data))
-        .catch(error => console.log(error))
-    }, [])
+  useEffect(() => {
+    getData("projects")
+      .then((data) => setPersonalProjects(data.reverse()))
+      .catch((error) => console.log(error));
 
-    return (
-        <globalContext.Provider value={{
-            personalProjects,
-            certificates,
-            mobileView
-        }}>
-            {children}
-        </globalContext.Provider>
-    )
+    getData("certificates")
+      .then((data) => setCertificates(data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  return (
+    <globalContext.Provider value={{
+      personalProjects,
+      certificates,
+      mobileView,
+    }}
+    >
+      {children}
+    </globalContext.Provider>
+  );
 }

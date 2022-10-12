@@ -32,15 +32,10 @@
             -o-border-radius: 1rem;
         }
         .certificate-overlay-button{
-            @include btn;
-            .certificate-overlay-button-icon{
-                fill: $white;
-                font-size: 2rem;
-            }
+            fill: $primary;
+            font-size: 2rem;
             &:hover{
-                .certificate-overlay-button-icon{
-                    fill: $primary;
-                }
+                cursor: pointer;
             }
         }
     }

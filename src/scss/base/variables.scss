@@ -28,6 +28,7 @@ $css: #1572b6;
 $node: #83cd29;
 $git: #f03c2e;
 $firebase: #ffcb2b;
+$redux-toolkit: #764abc;
 
 $firebase-degraded: #ffca2b38;
 $js-degraded: #f0da4f3d;
@@ -38,6 +39,7 @@ $react-degraded: #61dafb3b;
 $css-degraded: #1573b63e;
 $node-degraded: #83cd293d;
 $git-degraded: #f03b2e39;
+$redux-toolkit-degraded: #764abc3d;
 
 $instagram: #f36a3c;
 $fiverr: #1dbf73;
@@ -65,7 +67,8 @@ $skills:
     'react' $react, 
     'css' $css, 
     'node' $node, 
-    'git' $git
+    'git' $git,
+    'redux-toolkit' $redux-toolkit,
 ;
 
 $skillsProjectCard:
@@ -77,6 +80,7 @@ $skillsProjectCard:
     'css-project-card' $css $css-degraded, 
     'node-project-card' $node $node-degraded, 
     'firebase-project-card' $firebase $firebase-degraded, 
+    'redux-toolkit-project-card' $redux-toolkit $redux-toolkit-degraded,
 ;
 
 $socialMediaColors:

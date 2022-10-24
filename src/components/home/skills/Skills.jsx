@@ -2,8 +2,8 @@ import React from "react";
 import {
   FaReact, FaSass, FaHtml5, FaGitAlt,
 } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript } from "react-icons/si";
-import { IoLogoCss3, IoLogoNodejs } from "react-icons/io";
+import { SiTailwindcss, SiJavascript, SiRedux } from "react-icons/si";
+import { IoLogoCss3 } from "react-icons/io";
 
 export default function Skills() {
   const skills = [
@@ -36,8 +36,8 @@ export default function Skills() {
       icon: <FaGitAlt className="skill-icon git" />,
     },
     {
-      name: "Node JS",
-      icon: <IoLogoNodejs className="skill-icon node" />,
+      name: "Redux Toolkit",
+      icon: <SiRedux className="skill-icon redux-toolkit" />,
     },
   ];
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { FaReact, FaSass, FaHtml5 } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiFirebase } from "react-icons/si";
+import {
+  SiTailwindcss, SiJavascript, SiFirebase, SiRedux,
+} from "react-icons/si";
 import { IoLogoCss3, IoLogoNodejs } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
@@ -36,6 +38,7 @@ export default function ProjectCard({ project }) {
             {technology.toLowerCase() === "css" && <IoLogoCss3 className="project-card-icon" />}
             {technology.toLowerCase() === "node" && <IoLogoNodejs className="project-card-icon" />}
             {technology.toLowerCase() === "html" && <FaHtml5 className="project-card-icon" />}
+            {technology.toLowerCase() === "redux-toolkit" && <SiRedux className="project-card-icon" />}
           </div>
         ))}
       </div>

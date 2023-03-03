@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 import returnTechIcon from "../../../utils/returnTechIcon";
 
@@ -7,6 +7,7 @@ export default function ProjectOpenInfo({
   openProjectInfo,
   setOpenProjectInfo,
 }) {
+  const [closingPopup, setClosingPopup] = useState(false);
   const {
     name,
     images,
@@ -19,10 +20,23 @@ export default function ProjectOpenInfo({
   } = projectInfo;
 
   return (
-    <div className="project-details-bg">
-      <div className="project-details-container container">
+    <div
+      className={`${
+        closingPopup && "details-bg-animation-out"
+      } project-details-bg`}
+    >
+      <div
+        className={`${
+          closingPopup && "details-container-animation-out"
+        } project-details-container container`}
+      >
         <div
-          onClick={() => setOpenProjectInfo(false)}
+          onClick={() => {
+            setClosingPopup(true);
+            setTimeout(() => {
+              setOpenProjectInfo(false);
+            }, 200);
+          }}
           className="close-icon-container"
         >
           <AiOutlineClose className="close-icon" />

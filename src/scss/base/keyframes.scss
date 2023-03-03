@@ -1,0 +1,62 @@
+@mixin containerScaleKeyframe($type) {
+  @if $type == 'in'{
+    @keyframes containerScaleIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    animation: containerScaleIn 0.15s ease-in-out forwards;
+  }
+  @if $type == 'out' {
+    @keyframes containerScaleOut {
+      0% {
+        transform: scale(1.01);
+        opacity: 1;
+      }
+      
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+    animation: containerScaleOut 0.15s ease-in-out forwards;
+  }
+}
+
+@mixin bgBlurChangerKeyframe($type) {
+  @if $type == 'in'{
+    @keyframes bgBlurIn {
+      0% {
+        background-color: rgba($color: $black, $alpha: 0.1);
+        backdrop-filter: blur(.1rem);
+      }
+      
+      100% {
+        background-color: rgba($color: $black, $alpha: 0.45);
+        backdrop-filter: blur(.25rem);
+      }
+    }
+    
+    animation: bgBlurIn 0.2s ease-in-out forwards;
+  }
+  @if $type == 'out' {
+    @keyframes bgBlurOut {
+      0% {
+        background-color: rgba($color: $black, $alpha: 0.45);
+        backdrop-filter: blur(.25rem);
+      }
+      100% {
+        background-color: rgba($color: $black, $alpha: 0.1);
+        backdrop-filter: blur(.1rem);
+      }
+    }
+    
+    animation: bgBlurOut 0.2s ease-in-out forwards;
+  }
+}

@@ -6,13 +6,8 @@
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
     min-width: 31rem;
-    max-width: 31rem;
-    height: fit-content;
-    transition: all ease-in-out 100ms;
-    -webkit-transition: all ease-in-out 100ms;
-    -moz-transition: all ease-in-out 100ms;
-    -ms-transition: all ease-in-out 100ms;
-    -o-transition: all ease-in-out 100ms;
+    height: 42.66rem;
+    @include transition(all);
     border: 2px solid #D8D8D8;
     display: flex;
     flex-direction: column;

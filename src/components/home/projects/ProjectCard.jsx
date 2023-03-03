@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectOpenInfo from "./ProjectOpenInfo";
 import returnTechIcon from "../../../utils/returnTechIcon";
+import {
+  disableScroll,
+  enableScroll,
+} from "../../../utils/enableAndDisableScrollInBody";
 
 export default function ProjectCard({ project }) {
   const [openProjectInfo, setOpenProjectInfo] = useState(false);
   const { name, images, description, technologies } = project.data;
+
+  useEffect(() => {
+    if (openProjectInfo) disableScroll();
+    else enableScroll();
+  }, [openProjectInfo]);
 
   return (
     <>

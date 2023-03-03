@@ -1,23 +1,27 @@
 body::-webkit-scrollbar,
+.project-details-container::-webkit-scrollbar, 
 .projects-cards-container::-webkit-scrollbar,
 .certificates-container::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
 body::-webkit-scrollbar:vertical,
+.project-details-container::-webkit-scrollbar:vertical, 
 .projects-cards-container::-webkit-scrollbar:horizontal,
 .certificates-container::-webkit-scrollbar:horizontal {
-    width: 7.5px;
-    height: 7.5px;
+    width: 10px;
+    height: 10px;
 }
 
-body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button,
-.projects-cards-container::-webkit-scrollbar-button:increment, .projects-cards-container::-webkit-scrollbar-button,
-.certificates-container::-webkit-scrollbar-button:increment, .certificates-container::-webkit-scrollbar-button {
+body::-webkit-scrollbar-button,
+ .project-details-container::-webkit-scrollbar-button 
+ .projects-cards-container::-webkit-scrollbar-button, 
+ .certificates-container::-webkit-scrollbar-button {
     display: none;
 } 
 
 body::-webkit-scrollbar-thumb,
+.project-details-container::-webkit-scrollbar-thumb, 
 .projects-cards-container::-webkit-scrollbar-thumb,
 .certificates-container::-webkit-scrollbar-thumb {
     background-color: $primary;
@@ -29,6 +33,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 body::-webkit-scrollbar-track,
+.project-details-container::-webkit-scrollbar-track, 
 .projects-cards-container::-webkit-scrollbar-track,
 .certificates-container::-webkit-scrollbar-track{
     border-radius: 10px;  

@@ -1,3 +1,40 @@
+.project-details-bg{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $black, $alpha: 0.15);
+}
 .project-details-container{
-    padding-top: 7.36rem;
+    background-color: $white;
+    position: relative;
+    padding: 2rem;
+    height: 95%;
+    width: 95%;
+    max-width: 85rem;
+    overflow-y: scroll;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    @include box-shadow;
+    border: 2px solid $primary;
+    background-color: $white;
+    .close-icon-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        cursor: pointer;
+        width: fit-content;
+        .close-icon{
+            font-size: 2rem;
+        }
+    }
 }

@@ -1,35 +1,35 @@
 .project-images-container{
     display: flex;
-    justify-content: space-between;
-    .project-images-icons-container{
-        height: auto;
-        padding: 0 2.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 1rem;
-        -webkit-border-radius: 1rem;
-        -moz-border-radius: 1rem;
-        -ms-border-radius: 1rem;
-        -o-border-radius: 1rem;
-        @include transition(all);
-        .project-images-icon{
-            @include transition(all);
-            font-size: 5rem;
-            stroke-width: 8rem;
-        }
-        &:hover{
-            cursor: pointer;
-            background-color: $white;
-            @include box-shadow;
-            .project-images-icon{
-                stroke: $primary;
-            }
-        }
-    }
+    justify-content: center;
+    // .project-images-icons-container{
+    //     height: auto;
+    //     padding: 0 2.5rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     border-radius: 1rem;
+    //     -webkit-border-radius: 1rem;
+    //     -moz-border-radius: 1rem;
+    //     -ms-border-radius: 1rem;
+    //     -o-border-radius: 1rem;
+    //     @include transition(all);
+    //     .project-images-icon{
+    //         @include transition(all);
+    //         font-size: 5rem;
+    //         stroke-width: 8rem;
+    //     }
+        // &:hover{
+        //     cursor: pointer;
+        //     background-color: $white;
+        //     @include box-shadow;
+        //     .project-images-icon{
+        //         stroke: $primary;
+        //     }
+        // }
+    // }
     .project-image-container{
-        width: 95%;
-        max-width: 90rem;
+        width: 100%;
+        max-width: 60rem;
         border-radius: 1rem;
         -webkit-border-radius: 1rem;
         -moz-border-radius: 1rem;
@@ -39,14 +39,14 @@
     }
 }
 
-@include mobile{
-    .project-images-container{
+// @include mobile{
+//     .project-images-container{
 
-        .project-images-icons-container{
-            padding: 0 1.5rem;
-            .project-images-icon{
-                font-size: 3rem;
-            }
-        }
-    }
-}
+//         .project-images-icons-container{
+//             padding: 0 1.5rem;
+//             .project-images-icon{
+//                 font-size: 3rem;
+//             }
+//         }
+//     }
+// }

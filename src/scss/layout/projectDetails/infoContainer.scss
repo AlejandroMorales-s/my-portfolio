@@ -3,6 +3,27 @@
     flex-direction: column;
     gap: $spacing;
     padding: $spacing 0;
+    .project-info-technologies{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .project-card-technology{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.5rem;
+            border-radius: 1.7rem;
+            -webkit-border-radius: 1.7rem;
+            -moz-border-radius: 1.7rem;
+            -ms-border-radius: 1.7rem;
+            -o-border-radius: 1.7rem;
+            .project-card-icon{ 
+                font-size: 2rem;
+            }
+        }
+    }
     .info{
         display: flex;
         flex-direction: column;
@@ -22,5 +43,13 @@
         a button{
             @include btn;
         }
+    }
+}
+
+@include mobile{
+    .project-info-technologies{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }

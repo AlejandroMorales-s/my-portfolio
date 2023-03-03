@@ -24,8 +24,24 @@ module.exports = {
 
     "linebreak-style": ["error", "windows"],
 
-    quotes: ["error", "double"],
-
     "react/prop-types": "off",
+
+    "jsx-quotes": ["error", "double"],
+
+    quotes: ["error", "double", { avoidEscape: true }],
   },
+  overrides: [
+    {
+      files: ["**/*.js"],
+      rules: {
+        quotes: ["error", "double", { avoidEscape: true }],
+      },
+    },
+    {
+      files: ["**/*.jsx"],
+      rules: {
+        quotes: ["error", "double", { avoidEscape: true }],
+      },
+    },
+  ],
 };

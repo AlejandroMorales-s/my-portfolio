@@ -1,5 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { globalContext } from "../../../context/GlobalContext";
+import {
+  disableScroll,
+  enableScroll,
+} from "../../../utils/enableAndDisableScrollInBody";
 import CertificateOverlay from "./CertificateOverlay";
 
 export default function Certificate({ cert }) {
@@ -16,17 +20,16 @@ export default function Certificate({ cert }) {
     setShowingCertificate(true);
   };
 
-  const showCertificate = () => openCertificate();
-
-  const handleClick = (e) => { if (e.keyCode === 13) openCertificate(); };
+  useEffect(() => {
+    if (showingCertificate) disableScroll();
+    else enableScroll();
+  }, [showingCertificate]);
 
   return (
     <>
       <div
         role="button"
-        tabIndex={0}
-        onClick={showCertificate}
-        onKeyDown={(e) => handleClick(e)}
+        onClick={() => openCertificate()}
         className="certificate-card"
       >
         <div className="certificate-img-container">
@@ -34,13 +37,12 @@ export default function Certificate({ cert }) {
         </div>
         <p>{name}</p>
       </div>
-      {showingCertificate
-        && (
-          <CertificateOverlay
-            certificate={certificateToShow}
-            setShowing={setShowingCertificate}
-          />
-        )}
+      {showingCertificate && (
+        <CertificateOverlay
+          certificate={certificateToShow}
+          setShowing={setShowingCertificate}
+        />
+      )}
     </>
   );
 }

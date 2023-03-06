@@ -1,22 +1,25 @@
-import React from "react";
-import ProfilePhoto from "../../ProfilePhoto";
+import React from 'react';
+import ProfilePhoto from '../../ProfilePhoto';
 
 export default function About() {
   return (
-    <div id="about" className="container about">
-      <h2 className="h2">About</h2>
-      <div className="about-container">
+    <div id='about' className='container about'>
+      <h2 className='h2'>About</h2>
+      <div className='about-container'>
         <ProfilePhoto />
         <div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi adipisci incidunt,
-            voluptatum eaque assumenda dolores accusamus ex consequatur dolorem pariatur maiores
-            itaque mollitia perferendis fuga distinctio labore reiciendis rerum illum. Consequuntur
-            odit eius, cupiditate iure nam modi nemo quisquam unde necessitatibus voluptatum
-            totam alias, labore dolore ea quod aut. Praesentium possimus eius accusamus similique
-            voluptates provident velit in omnis porro!
+            Soy un desarrollador de front-end con una gran pasión por el
+            desarrollo de aplicaciones web interactivas y dinámicas. Me
+            especializo en React y tengo experiencia desarrollando varios
+            proyectos personales. Además, he trabajado en proyectos de equipo
+            donde he aprendido mucho y he aportado mis habilidades técnicas para
+            lograr un resultado de alta calidad. Me gusta mantenerme actualizado
+            en las últimas tendencias y tecnologías en el campo del desarrollo
+            de aplicaciones web para asegurarme de hacer mi trabajo lo mejor
+            posible.
           </p>
-          <button type="button">Download CV</button>
+          <button type='button'>Download CV</button>
         </div>
       </div>
     </div>

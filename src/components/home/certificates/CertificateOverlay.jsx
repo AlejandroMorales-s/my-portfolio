@@ -18,15 +18,25 @@ export default function CertificateOverlay({ certificate, setShowing }) {
         <div className="certificate-overlay-img-container">
           <img src={image} alt={name} />
         </div>
-        <AiOutlineClose
-          className="certificate-overlay-button certificate-overlay-button-icon"
-          onClick={() => {
-            setClosingOverlay(true);
-            setTimeout(() => {
-              setShowing(false);
-            }, 200);
-          }}
-        />
+        <div className="certificate-overlay-buttons-container">
+          <a target="_blank" href={image}>
+            <button
+              className="certificate-overlay-image-cropped-button"
+              type="button"
+            >
+              Cropped? See it here
+            </button>
+          </a>
+          <AiOutlineClose
+            className="certificate-overlay-close-button"
+            onClick={() => {
+              setClosingOverlay(true);
+              setTimeout(() => {
+                setShowing(false);
+              }, 200);
+            }}
+          />
+        </div>
       </div>
     </div>
   );

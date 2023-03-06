@@ -8,16 +8,8 @@ export default function ProjectOpenInfo({
   setOpenProjectInfo,
 }) {
   const [closingPopup, setClosingPopup] = useState(false);
-  const {
-    name,
-    images,
-    description,
-    info,
-    functions,
-    repoLink,
-    siteLink,
-    technologies,
-  } = projectInfo;
+  const { name, images, info, functions, repoLink, siteLink, technologies } =
+    projectInfo;
 
   return (
     <div
@@ -76,7 +68,6 @@ export default function ProjectOpenInfo({
             ))}
           </div>
           <div className="info">
-            <p>{description}</p>
             <p>{info}</p>
           </div>
           {functions && (

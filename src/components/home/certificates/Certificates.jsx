@@ -5,7 +5,6 @@ import Certificate from "./Certificate";
 
 export default function Certificates() {
   const { certificates } = useContext(globalContext);
-  const { mobileView } = useContext(globalContext);
 
   const certificatesMobile = [];
 
@@ -16,20 +15,15 @@ export default function Certificates() {
     <div id="certificates" className="certificates container">
       <h2 className="h2">Certificates</h2>
       <div className="certificates-container">
-        {mobileView
-          ? certificatesMobile?.map((certificate) => certificate !== undefined
-            && (
-              <Certificate
-                key={certificate.id}
-                cert={certificate}
-              />
-            ))
-          : certificates?.map((certificate) => (
-            <Certificate
-              key={certificate.id}
-              cert={certificate}
-            />
-          ))}
+        {certificates?.map((certificate) => {
+          if (
+            certificate.id === "VV0fD2Y3wyYDyaYnjGPq" ||
+            certificate.id === "RFsBqNIghGRqtSEgLCUb" ||
+            certificate.id === "iu3AK8BEhiHpqHbOUXOE"
+          ) {
+            return <Certificate key={certificate.id} cert={certificate} />;
+          }
+        })}
       </div>
       <Link className="certificates-button" to="/certificates">
         <button type="button">See all</button>

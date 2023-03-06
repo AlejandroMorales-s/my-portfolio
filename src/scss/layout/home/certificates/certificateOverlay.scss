@@ -35,11 +35,22 @@
             -ms-border-radius: 1rem;
             -o-border-radius: 1rem;
         }
-        .certificate-overlay-button{
-            fill: $primary;
-            font-size: 2rem;
-            &:hover{
-                cursor: pointer;
+        .certificate-overlay-buttons-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            .certificate-overlay-close-button{
+                fill: $primary;
+                font-size: 2.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .certificate-overlay-image-cropped-button{
+                @include btn;
+                background-color: transparent;
+                color: $primary;
             }
         }
     }

@@ -1,11 +1,11 @@
-import React from 'react';
-import ProfilePhoto from '../../ProfilePhoto';
+import React from "react";
+import ProfilePhoto from "../../ProfilePhoto";
 
 export default function About() {
   return (
-    <div id='about' className='container about'>
-      <h2 className='h2'>About</h2>
-      <div className='about-container'>
+    <div id="about" className="container about">
+      <h2 className="h2">About</h2>
+      <div className="about-container">
         <ProfilePhoto />
         <div>
           <p>
@@ -19,7 +19,11 @@ export default function About() {
             de aplicaciones web para asegurarme de hacer mi trabajo lo mejor
             posible.
           </p>
-          <button type='button'>Download CV</button>
+          <button type="button">
+            <a href="./../src/assets/CV.pdf" download="">
+              Download CV
+            </a>
+          </button>
         </div>
       </div>
     </div>

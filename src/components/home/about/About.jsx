@@ -1,7 +1,19 @@
 import React from "react";
 import ProfilePhoto from "../../ProfilePhoto";
+import { saveAs } from "file-saver";
 
 export default function About() {
+  const downloadPDF = () => {
+    fetch("./CV.pdf")
+      .then((response) => response.blob())
+      .then((blob) => {
+        saveAs(blob, "cv.pdf");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <div id="about" className="container about">
       <h2 className="h2">About</h2>
@@ -19,10 +31,8 @@ export default function About() {
             de aplicaciones web para asegurarme de hacer mi trabajo lo mejor
             posible.
           </p>
-          <button type="button">
-            <a href="./../src/assets/CV.pdf" download="">
-              Download CV
-            </a>
+          <button onClick={downloadPDF} type="button">
+            Download CV
           </button>
         </div>
       </div>

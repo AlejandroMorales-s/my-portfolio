@@ -16,7 +16,7 @@ export default function Contact() {
         <a href="https://github.com/AlejandroMorales-s" target="_blank" rel="noopener noreferrer">
           <AiFillGithub className="contact-social-media-icon github" />
         </a>
-        <a href="https://es.fiverr.com/alejandro_me?up_rollout=true" target="_blank" rel="noopener noreferrer">
+        <a href="https://es.fiverr.com/alejandro_me/develop-your-react-app-using-react-and-firebase" target="_blank" rel="noopener noreferrer">
           <SiFiverr className="contact-social-media-icon fiverr" />
         </a>
         <a href="https://www.linkedin.com/in/alejandro-morales-0b7513200/" target="_blank" rel="noopener noreferrer">

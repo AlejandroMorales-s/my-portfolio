@@ -1,8 +1,11 @@
 import React from "react";
+import { FaReact, FaSass, FaHtml5, FaGitAlt } from "react-icons/fa";
 import {
-  FaReact, FaSass, FaHtml5, FaGitAlt,
-} from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiRedux } from "react-icons/si";
+  SiFirebase,
+  SiTailwindcss,
+  SiJavascript,
+  SiRedux,
+} from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io";
 
 export default function Skills() {
@@ -38,6 +41,10 @@ export default function Skills() {
     {
       name: "Redux Toolkit",
       icon: <SiRedux className="skill-icon redux-toolkit" />,
+    },
+    {
+      name: "Firebase",
+      icon: <SiFirebase className="skill-icon firebase" />,
     },
   ];
 

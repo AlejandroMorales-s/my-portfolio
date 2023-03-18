@@ -1,5 +1,5 @@
 import React from "react";
-import profilePhoto from "../assets/headerPhoto.png";
+import profilePhoto from "../assets/headerPhoto.webp";
 
 export default function ProfilePhoto() {
   return (

@@ -29,17 +29,15 @@
   }
 }
 
-@mixin bgBlurChangerKeyframe($type) {
+@mixin bgColorChangerKeyframe($type) {
   @if $type == 'in'{
     @keyframes bgBlurIn {
       0% {
         background-color: rgba($color: $black, $alpha: 0.1);
-        backdrop-filter: blur(.1rem);
       }
       
       100% {
         background-color: rgba($color: $black, $alpha: 0.45);
-        backdrop-filter: blur(.25rem);
       }
     }
     
@@ -49,11 +47,9 @@
     @keyframes bgBlurOut {
       0% {
         background-color: rgba($color: $black, $alpha: 0.45);
-        backdrop-filter: blur(.25rem);
       }
       100% {
         background-color: rgba($color: $black, $alpha: 0.1);
-        backdrop-filter: blur(.1rem);
       }
     }
     

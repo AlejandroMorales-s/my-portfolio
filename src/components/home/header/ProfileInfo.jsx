@@ -6,7 +6,7 @@ export default function ProfileInfo() {
     <div className="header-info-container">
       <h2>Alejandro Morales</h2>
       <ProfilePhoto />
-      <p className="job-title">Front-End Developer</p>
+      <h2 className="job-title">Front-End Developer</h2>
     </div>
   );
 }

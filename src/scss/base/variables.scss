@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-$font: 'Poppins', sans-serif;
-$font-secondary: 'Sriracha', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+$font: "Poppins", sans-serif;
+$font-secondary: "Sriracha", cursive;
 
 //* Fuentes
 $light: 300;
@@ -10,12 +10,12 @@ $medium: 500;
 $semiBold: 600;
 
 //* Colors
-$primary: #7353BA;
+$primary: #7353ba;
 $lightGray: #f5f5f5;
 $darkGray: #dddddd;
 $white: #ffffff;
 $black: #000000;
-$text: #6B7280;
+$text: #6b7280;
 $red: #ff0000;
 $green: #1f9f43;
 
@@ -56,37 +56,22 @@ $desktop: 1550px;
 $spacing: 5rem;
 
 //* Font Sizes
-$fontSize: (2.25rem, 3rem, 2.6rem, 1.6rem);
+$fontSize: (2.25rem, 3rem, 2.2rem, 1.6rem);
 
 //* Skills
-$skills: 
-    "js" $js,
-    'tailwind' $tailwind, 
-    'html' $html, 
-    'sass' $sass, 
-    'react' $react, 
-    'css' $css, 
-    'node' $node, 
-    'git' $git,
-    'redux-toolkit' $redux-toolkit,
-    'firebase' $firebase,
-;
+$skills: "js" $js, "tailwind" $tailwind, "html" $html, "sass" $sass,
+  "react" $react, "css" $css, "node" $node, "git" $git,
+  "redux-toolkit" $redux-toolkit, "firebase" $firebase;
 
-$skillsProjectCard:
-    "javascript-project-card" $js $js-degraded,
-    'tailwind-project-card' $tailwind $tailwind-degraded, 
-    'html-project-card' $html $html-degraded, 
-    'sass-project-card' $sass $sass-degraded, 
-    'react-project-card' $react $react-degraded, 
-    'css-project-card' $css $css-degraded, 
-    'node-project-card' $node $node-degraded, 
-    'firebase-project-card' $firebase $firebase-degraded, 
-    'redux-toolkit-project-card' $redux-toolkit $redux-toolkit-degraded,
-;
+$skillsProjectCard: "javascript-project-card" $js $js-degraded,
+  "tailwind-project-card" $tailwind $tailwind-degraded,
+  "html-project-card" $html $html-degraded,
+  "sass-project-card" $sass $sass-degraded,
+  "react-project-card" $react $react-degraded,
+  "css-project-card" $css $css-degraded,
+  "node-project-card" $node $node-degraded,
+  "firebase-project-card" $firebase $firebase-degraded,
+  "redux-toolkit-project-card" $redux-toolkit $redux-toolkit-degraded;
 
-$socialMediaColors:
-    'instagram' $instagram,
-    'fiverr' $fiverr,
-    'linkedin' $linkedin,
-    'github' $github
-;
+$socialMediaColors: "instagram" $instagram, "fiverr" $fiverr,
+  "linkedin" $linkedin, "github" $github;

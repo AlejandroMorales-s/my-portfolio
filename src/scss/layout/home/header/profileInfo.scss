@@ -1,46 +1,46 @@
-.header-info-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    align-items: center;
-    h2{
-        font-size: $spacing;
-        font-weight: $semiBold;
-    }
-    .job-title{
-        display: block;
-        white-space: nowrap;
-        border-right: 3px solid $primary;
-        font-size: 2.5rem;
-        color: $black;
-        font-weight: $medium;
-        width: 17ch;
-        animation: typing 1s steps(20) normal,                        
-        blink 0.5s infinite step-end alternate;
-        overflow: hidden;
-    }
+.header-info-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  h2 {
+    font-size: $spacing;
+    font-weight: $semiBold;
+  }
+  .job-title {
+    display: block;
+    white-space: nowrap;
+    border-right: 3px solid $primary;
+    font-size: 2.5rem;
+    color: $black;
+    font-weight: $medium;
+    width: 17ch;
+    animation: typing 1s steps(20) normal,
+      blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
 }
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 }
 
-@include mobile{
-    .header-info-container h2{
-        font-size: 3.15rem;
-    }
+@include mobile {
+  .header-info-container h2 {
+    font-size: 3.15rem;
+  }
 }

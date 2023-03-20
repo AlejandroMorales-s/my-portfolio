@@ -1,55 +1,110 @@
-.info-container{
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: $spacing 0;
+  .devices-supported {
     display: flex;
     flex-direction: column;
-    gap: $spacing;
-    padding: $spacing 0;
-    .project-info-technologies{
+    gap: 2rem;
+    align-items: center;
+    .devices-supported-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap: 2rem;
+
+      .device-supported-container {
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
-        .project-card-technology{
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 0.5rem;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 1.5rem;
-            border-radius: 1.7rem;
-            -webkit-border-radius: 1.7rem;
-            -moz-border-radius: 1.7rem;
-            -ms-border-radius: 1.7rem;
-            -o-border-radius: 1.7rem;
-            .project-card-icon{ 
-                font-size: 2rem;
-            }
+        padding: 1rem;
+        background-color: rgba($color: $green, $alpha: 0.1);
+        gap: 1rem;
+        border-radius: 2rem;
+        p {
+          font-weight: $medium;
         }
+        .device-supported-icon {
+          font-size: 2rem;
+          fill: $green;
+        }
+      }
     }
-    .info{
+  }
+  .project-info-technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .project-info-technologies-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      .project-card-technology {
         display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-    }
-    .functionalities-list{
-        list-style: inside;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .project-buttons-container{
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
+        gap: 0.5rem;
         align-items: center;
-        a button{
-            @include btn;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        border-radius: 1.7rem;
+        -webkit-border-radius: 1.7rem;
+        -moz-border-radius: 1.7rem;
+        -ms-border-radius: 1.7rem;
+        -o-border-radius: 1.7rem;
+        .project-card-tech-name {
+          font-weight: $medium;
         }
+        .project-card-icon {
+          font-size: 2rem;
+        }
+      }
     }
+  }
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .functionalities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    h3 {
+      align-self: center;
+    }
+    .functionalities-list {
+      list-style: inside;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  .project-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a button {
+      @include btn;
+    }
+  }
 }
 
-@include mobile{
-    .project-info-technologies{
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+@include mobile {
+  .info-container {
+    .devices-supported-container {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem !important;
     }
+    .project-info-technologies-container {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
 }

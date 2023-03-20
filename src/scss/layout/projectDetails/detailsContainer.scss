@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include bgBlurChangerKeyframe('in');
+  @include bgColorChangerKeyframe("in");
 }
 
 .project-details-container {
@@ -27,7 +27,7 @@
   border: 2px solid $primary;
   background-color: $white;
   @include box-shadow;
-  @include containerScaleKeyframe('in');
+  @include containerScaleKeyframe("in");
 
   .close-icon-container {
     position: absolute;
@@ -43,10 +43,10 @@
   }
 }
 
-.details-bg-animation-out{
-  @include bgBlurChangerKeyframe('out');
+.details-bg-animation-out {
+  @include bgColorChangerKeyframe("out");
 }
 
-.details-container-animation-out{
-  @include containerScaleKeyframe('out');
+.details-container-animation-out {
+  @include containerScaleKeyframe("out");
 }

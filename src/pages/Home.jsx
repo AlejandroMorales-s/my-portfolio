@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <Projects />
       <Certificates />
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 }

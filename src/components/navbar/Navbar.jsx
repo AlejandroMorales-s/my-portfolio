@@ -80,6 +80,15 @@ export default function Navbar() {
                 <a
                   onClick={(e) => scroll(e)}
                   className="nav-button"
+                  href="#professional-experience"
+                >
+                  Professional Experience
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={(e) => scroll(e)}
+                  className="nav-button"
                   href="#skills"
                 >
                   Skills
